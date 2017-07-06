@@ -7,8 +7,10 @@ def divisors(n): #this is the number for which we want the proper divisors
 
     for count in range (2, int(np.floor(np.sqrt(n)) + 1)):
         if n % count == 0:
-            divisors += [count, n/count]
-
+            if count != n/count:
+                divisors += [count, n/count]
+            elif True:
+                divisors.append(count)
     return divisors
 
 def primes(n): #returns primes up to n
@@ -28,3 +30,7 @@ def primes(n): #returns primes up to n
         if isprime[i] == 1:
             primes.append(potentialprimes[i])
     return primes
+
+def fib(n): #returns nth fibonacci number
+    sqrf = np.sqrt(5)
+    return (1/sqrf)((1 + sqrf)/2) ** n + (1/sqrf)((1 - sqrf)/2) ** n
