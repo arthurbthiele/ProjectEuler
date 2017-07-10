@@ -34,3 +34,5 @@ def primes(n): #returns primes up to n
 def fib(n): #returns nth fibonacci number
     sqrf = np.sqrt(5)
     return (1/sqrf)((1 + sqrf)/2) ** n + (1/sqrf)((1 - sqrf)/2) ** n
+
+print len(primes(1000))
