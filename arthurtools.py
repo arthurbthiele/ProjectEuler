@@ -4,7 +4,6 @@ import numpy as np
 import numpy as np
 def divisors(n): #this is the number for which we want the proper divisors
     divisors = [1]
-
     for count in range (2, int(np.floor(np.sqrt(n)) + 1)):
         if n % count == 0:
             if count != n/count:
@@ -34,5 +33,3 @@ def primes(n): #returns primes up to n
 def fib(n): #returns nth fibonacci number
     sqrf = np.sqrt(5)
     return (1/sqrf)((1 + sqrf)/2) ** n + (1/sqrf)((1 - sqrf)/2) ** n
-
-print len(primes(1000))

@@ -2,14 +2,14 @@
 
 numberofways = 0
 
-for penny in range (0, 201):
-    for hapenny in range (0, 101):
-        for fivepence in range (0, 41):
-            for tenpence in range (0, 21):
-                for twentypence in range (0, 11):
-                    for fiftypence in range (0, 5):
-                        for pound in range (0, 3):
-                            for twopounds in range (0, 2):
-                                if penny + 2 * hapenny + 5 * fivepence + 10 * tenpence + 20 * twentypence + 50 * fiftypence + 100 * pound + 200 * twopounds == 200:
-                                    numberofways += 1
+for twopounds in range (0, 2):
+    for pound in range (0, (200 - 200 * twopounds)/100 + 1):
+        for fiftypence in range (0, (200 - 200 * twopounds - 100 * pound)/50 + 1):
+            for twentypence in range (0, (200 - 200 * twopounds - 100 * pound - 50 * fiftypence)/20 + 1):
+                for tenpence in range (0, (200 - 200 * twopounds - 100 * pound - 50 * fiftypence - 20 * twentypence)/10 + 1):
+                    for fivepence in range (0, (200 - 200 * twopounds - 100 * pound - 50 * fiftypence - 20 * twentypence - 10 * tenpence)/5 + 1):
+                        for tuppence in range (0, (200 - 200 * twopounds - 100 * pound - 50 * fiftypence - 20 * twentypence - 10 * tenpence - 5 * fivepence)/2 + 1):
+                            #the rest gets made up by pennies, so each point we've reached here is a way to make 2 pounds
+                            numberofways += 1
+
 print numberofways
