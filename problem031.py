@@ -1,5 +1,6 @@
 #this problem is to determine the number of ways to make up 200p with different coins
-
+import time
+t = time.time()
 numberofways = 0
 
 for twopounds in range (0, 2):
@@ -13,3 +14,5 @@ for twopounds in range (0, 2):
                             numberofways += 1
 
 print numberofways
+print time.time() - t
+#this is probably the solution of which I am most proud (n < 38)
