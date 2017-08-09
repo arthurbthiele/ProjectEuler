@@ -14,6 +14,7 @@ for count in range (1, 1000):
                     maxlength = length
                     maxnum = count
                 done = True
+                print count, length
         remainders.append((remainders[-1]*10)%count)
 
 print maxlength, maxnum
